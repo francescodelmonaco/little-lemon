@@ -28,7 +28,7 @@ const welcomeStyles = StyleSheet.create({
         paddingVertical: 40
     },
     paragraph: {
-        color: "white",
+        color: "#EDEFEE",
         fontSize: 25,
         textAlign: "center",
         paddingHorizontal: 40

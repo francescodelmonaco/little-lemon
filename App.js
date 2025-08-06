@@ -3,17 +3,19 @@ import { StyleSheet, View } from 'react-native';
 // components
 import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
+import MenuItems from './components/MenuItems';
 import WelcomeScreen from './components/WelcomeScreen';
 
 export default function App() {
   return (
     <>
-      <View style={styles.mainView}>
+      <View style={styles.container}>
         <LittleLemonHeader />
         <WelcomeScreen />
+        <MenuItems />
       </View>
 
-      <View style={styles.footerView}>
+      <View style={styles.footerContainer}>
         <LittleLemonFooter />
       </View>
     </>
@@ -21,11 +23,11 @@ export default function App() {
 };
 
 const styles = StyleSheet.create({
-  mainView: {
+  container: {
     flex: 1,
     backgroundColor: '#333333',
   },
-  footerView: {
+  footerContainer: {
     backgroundColor: '#333333'
   }
 });
