@@ -47,6 +47,8 @@ const welcomeStyles = StyleSheet.create({
         backgroundColor: "#EDEFEE",
         marginHorizontal: 40,
         padding: 10,
-        marginVertical: 20
+        marginVertical: 20,
+        borderWidth: 1,
+        borderColor: "#EDEFEE"
     }
 });
