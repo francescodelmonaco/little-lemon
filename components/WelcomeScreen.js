@@ -1,6 +1,9 @@
-import { ScrollView, StyleSheet, Text } from "react-native";
+import { useState } from "react";
+import { ScrollView, StyleSheet, Text, TextInput } from "react-native";
 
 export default function WelcomeScreen() {
+    const [firstName, onChangeFirstName] = useState("");
+
     return (
         <ScrollView
             style={welcomeStyles.container}
@@ -13,6 +16,13 @@ export default function WelcomeScreen() {
             <Text style={welcomeStyles.paragraph}>
                 Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. We would love to hear more about your experience with us!
             </Text>
+
+            <TextInput
+                style={welcomeStyles.input}
+                placeholder="First Name"
+                value={firstName}
+                onChangeText={onChangeFirstName}
+            />
         </ScrollView>
     )
 };
@@ -32,5 +42,11 @@ const welcomeStyles = StyleSheet.create({
         fontSize: 25,
         textAlign: "center",
         paddingHorizontal: 40
+    },
+    input: {
+        backgroundColor: "#EDEFEE",
+        marginHorizontal: 40,
+        padding: 10,
+        marginVertical: 20
     }
 });
